@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  /* config options here */
+nextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: "/about",
+        destination: "https://www.bottomstreet.com/market/stocks",
+      },
+    ];
+  },
 };
-
 module.exports = nextConfig;
