@@ -24,6 +24,7 @@ function Page() {
         const response = await axios.get("/api/leetcode");
         console.log(response);
         setUserData(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
@@ -76,6 +77,13 @@ function Page() {
                 <p>
                   {leetcodeData && leetcodeData?.hardSolved}/
                   {leetcodeData && leetcodeData?.totalHard}
+                </p>
+              </div>
+              <div className="flex space-x-1 text-md text-white">
+                <p>Total : </p>
+                <p>
+                  {leetcodeData && leetcodeData?.totalSolved}/
+                  {leetcodeData && leetcodeData?.totalQuestions}
                 </p>
               </div>
             </div>

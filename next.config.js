@@ -3,8 +3,8 @@ nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/about",
-        destination: "https://www.bottomstreet.com/market/stocks",
+        source: "/todo:match(.*)",
+        destination: "https://quad-b-frontend-assignment.vercel.app:match",
       },
     ];
   },
