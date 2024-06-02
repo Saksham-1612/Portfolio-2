@@ -30,6 +30,14 @@ function Page() {
       }
     };
 
+    const fetchData = async () => {
+      try {
+        console.log(response);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+    fetchData();
     fetchUserData();
   }, []);
 
